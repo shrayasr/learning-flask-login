@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <form action="{{url_for("logout")}}" method="POST">
+    <button type="submit">Logout</button>
+  </form>
+
+  <ul>
+  {% for customer in customers %}
+    <a href="#" data-customer-id={{customer.id}} class="customer"><li>{{customer.name}}</li></a>
+  {% endfor %}
+  </ul>
+
+  <div id="customer-details">
+  </div>
+
+{% endblock %}

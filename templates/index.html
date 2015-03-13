@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  Hi. Click <a href="{{url_for("login")}}">here</a> to login
+
+  <br/>
+  <hr/>
+
+  <b>Note:</b>
+  Please confirm that <a href="{{url_for("customers")}}"><code>/customers/</code></a> or <a href="{{url_for("customer", id=1)}}"><code>/customers/1</code></a> doesn't work
+
+{% endblock %}
